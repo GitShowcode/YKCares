@@ -13,6 +13,7 @@
 		6085858F1CB5153F006EE82B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6085858D1CB5153F006EE82B /* Main.storyboard */; };
 		608585911CB5153F006EE82B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608585901CB5153F006EE82B /* Assets.xcassets */; };
 		608585941CB5153F006EE82B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608585921CB5153F006EE82B /* LaunchScreen.storyboard */; };
+		6085859D1CB52087006EE82B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085859C1CB52087006EE82B /* BaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		608585901CB5153F006EE82B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		608585931CB5153F006EE82B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		608585951CB5153F006EE82B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6085859B1CB52087006EE82B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		6085859C1CB52087006EE82B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		6085859E1CB521A8006EE82B /* YKcaresHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKcaresHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,9 @@
 			children = (
 				608585871CB5153F006EE82B /* AppDelegate.h */,
 				608585881CB5153F006EE82B /* AppDelegate.m */,
+				6085859B1CB52087006EE82B /* BaseViewController.h */,
+				6085859C1CB52087006EE82B /* BaseViewController.m */,
+				6085859E1CB521A8006EE82B /* YKcaresHeader.h */,
 				6085858A1CB5153F006EE82B /* ViewController.h */,
 				6085858B1CB5153F006EE82B /* ViewController.m */,
 				6085858D1CB5153F006EE82B /* Main.storyboard */,
@@ -150,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6085858C1CB5153F006EE82B /* ViewController.m in Sources */,
+				6085859D1CB52087006EE82B /* BaseViewController.m in Sources */,
 				608585891CB5153F006EE82B /* AppDelegate.m in Sources */,
 				608585861CB5153F006EE82B /* main.m in Sources */,
 			);
@@ -300,6 +308,7 @@
 				6085859A1CB5153F006EE82B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

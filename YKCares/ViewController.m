@@ -17,8 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    UIView *zz=[UIView new];
-    [self.view addSubview:zz];
+  
+    self.view.backgroundColor=[[UIColor cyanColor] colorWithAlphaComponent:.5];
+    
+    
+    
+    
     
     
     
