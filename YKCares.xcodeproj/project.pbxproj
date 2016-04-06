@@ -30,6 +30,7 @@
 		6085859B1CB52087006EE82B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		6085859C1CB52087006EE82B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		6085859E1CB521A8006EE82B /* YKcaresHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKcaresHeader.h; sourceTree = "<group>"; };
+		6085859F1CB52450006EE82B /* YKCaresNoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKCaresNoViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +63,10 @@
 		608585831CB5153F006EE82B /* YKCares */ = {
 			isa = PBXGroup;
 			children = (
+				608585A11CB52D32006EE82B /* Util */,
+				608585A01CB52B6E006EE82B /* YKCares */,
 				608585871CB5153F006EE82B /* AppDelegate.h */,
 				608585881CB5153F006EE82B /* AppDelegate.m */,
-				6085859B1CB52087006EE82B /* BaseViewController.h */,
-				6085859C1CB52087006EE82B /* BaseViewController.m */,
-				6085859E1CB521A8006EE82B /* YKcaresHeader.h */,
 				6085858A1CB5153F006EE82B /* ViewController.h */,
 				6085858B1CB5153F006EE82B /* ViewController.m */,
 				6085858D1CB5153F006EE82B /* Main.storyboard */,
@@ -84,6 +84,24 @@
 				608585851CB5153F006EE82B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		608585A01CB52B6E006EE82B /* YKCares */ = {
+			isa = PBXGroup;
+			children = (
+				6085859B1CB52087006EE82B /* BaseViewController.h */,
+				6085859C1CB52087006EE82B /* BaseViewController.m */,
+				6085859E1CB521A8006EE82B /* YKcaresHeader.h */,
+				6085859F1CB52450006EE82B /* YKCaresNoViewController.h */,
+			);
+			name = YKCares;
+			sourceTree = "<group>";
+		};
+		608585A11CB52D32006EE82B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
