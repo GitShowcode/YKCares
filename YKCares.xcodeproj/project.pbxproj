@@ -14,6 +14,10 @@
 		608585911CB5153F006EE82B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608585901CB5153F006EE82B /* Assets.xcassets */; };
 		608585941CB5153F006EE82B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608585921CB5153F006EE82B /* LaunchScreen.storyboard */; };
 		6085859D1CB52087006EE82B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085859C1CB52087006EE82B /* BaseViewController.m */; };
+		608585A41CB52E98006EE82B /* UIButton+EnlargeArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 608585A31CB52E98006EE82B /* UIButton+EnlargeArea.m */; };
+		608585A71CB52EA7006EE82B /* NSString+OutNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 608585A61CB52EA7006EE82B /* NSString+OutNull.m */; };
+		608585AA1CB52F1A006EE82B /* YKCaresObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 608585A91CB52F1A006EE82B /* YKCaresObj.m */; };
+		608585AD1CB52F52006EE82B /* NSDictionary+JJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 608585AC1CB52F52006EE82B /* NSDictionary+JJson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,14 @@
 		6085859C1CB52087006EE82B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		6085859E1CB521A8006EE82B /* YKcaresHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKcaresHeader.h; sourceTree = "<group>"; };
 		6085859F1CB52450006EE82B /* YKCaresNoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKCaresNoViewController.h; sourceTree = "<group>"; };
+		608585A21CB52E98006EE82B /* UIButton+EnlargeArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeArea.h"; sourceTree = "<group>"; };
+		608585A31CB52E98006EE82B /* UIButton+EnlargeArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeArea.m"; sourceTree = "<group>"; };
+		608585A51CB52EA7006EE82B /* NSString+OutNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+OutNull.h"; sourceTree = "<group>"; };
+		608585A61CB52EA7006EE82B /* NSString+OutNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+OutNull.m"; sourceTree = "<group>"; };
+		608585A81CB52F1A006EE82B /* YKCaresObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCaresObj.h; sourceTree = "<group>"; };
+		608585A91CB52F1A006EE82B /* YKCaresObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCaresObj.m; sourceTree = "<group>"; };
+		608585AB1CB52F52006EE82B /* NSDictionary+JJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JJson.h"; sourceTree = "<group>"; };
+		608585AC1CB52F52006EE82B /* NSDictionary+JJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JJson.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +112,14 @@
 		608585A11CB52D32006EE82B /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				608585A21CB52E98006EE82B /* UIButton+EnlargeArea.h */,
+				608585A31CB52E98006EE82B /* UIButton+EnlargeArea.m */,
+				608585A51CB52EA7006EE82B /* NSString+OutNull.h */,
+				608585A61CB52EA7006EE82B /* NSString+OutNull.m */,
+				608585AB1CB52F52006EE82B /* NSDictionary+JJson.h */,
+				608585AC1CB52F52006EE82B /* NSDictionary+JJson.m */,
+				608585A81CB52F1A006EE82B /* YKCaresObj.h */,
+				608585A91CB52F1A006EE82B /* YKCaresObj.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -175,8 +195,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6085858C1CB5153F006EE82B /* ViewController.m in Sources */,
+				608585AA1CB52F1A006EE82B /* YKCaresObj.m in Sources */,
 				6085859D1CB52087006EE82B /* BaseViewController.m in Sources */,
 				608585891CB5153F006EE82B /* AppDelegate.m in Sources */,
+				608585A71CB52EA7006EE82B /* NSString+OutNull.m in Sources */,
+				608585AD1CB52F52006EE82B /* NSDictionary+JJson.m in Sources */,
+				608585A41CB52E98006EE82B /* UIButton+EnlargeArea.m in Sources */,
 				608585861CB5153F006EE82B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
