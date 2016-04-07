@@ -25,7 +25,6 @@
     [btn setTitle:@"test" forState:JNormal];
     [btn setBackgroundColor:[UIColor blueColor]];
     [btn addTarget:self action:@selector(testmethod) forControlEvents:JAction];
-    
     [self.view addSubview:btn];
 
 }
