@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "YKcaresHeader.h"
+#import "YKCaresNoViewController.h"
+
 @interface BaseViewController : UIViewController
 
 -(void)ykcares;
