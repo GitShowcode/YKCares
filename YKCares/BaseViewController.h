@@ -9,10 +9,27 @@
 #import <UIKit/UIKit.h>
 #import "YKcaresHeader.h"
 #import "YKCaresNoViewController.h"
-
+#import "MBProgressHUD.h"
+#import "Alert.h"
 @interface BaseViewController : UIViewController
+{
+    MBProgressHUD *myHUD;
+    Alert *myalert;
+    
+    
+}
+-(void)hudloadtext:(NSString *)mystring;
+-(void)huddismiss;
+
+
+-(void)hudsuccess:(NSString *)mystring andtimer:(long)timer;
+-(void)huderror:(NSString *)mystring andtimer:(long)timer;
+-(void)hudwarning:(NSString *)mystring andtimer:(long)timer;
+
+-(void)alertsuccess:(NSString *)mystring andtimer:(long)timer;
+-(void)alerterror:(NSString *)mystring andtimer:(long)timer;
+-(void)alertwarning:(NSString *)mystring andtimer:(long)timer;
+
 
 -(void)ykcares;
-
-
 @end

@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "YKCaresNoViewController.h"
 #import "YKcaresHeader.h"
-@interface ViewController : UIViewController
+#import "Alert.h"
+@interface ViewController : UIViewController<AlertDelegate>
 
 
 @end
