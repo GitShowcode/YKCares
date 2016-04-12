@@ -11,8 +11,6 @@
 @interface LeftSlideViewController ()<UIGestureRecognizerDelegate>
 {
     CGFloat _scalef;  //实时横向位移
-    UIView *aview;
-    
 }
 @property (nonatomic,strong) UIViewController *mainVC;
 @property (nonatomic,strong) UITableView *leftTableview;
@@ -25,6 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeLeftView) name:@"closeleft" object:nil];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -194,8 +195,7 @@
         self.leftTableview.center = CGPointMake(kLeftCenterX, kScreenHeight * 0.5);
         self.leftTableview.transform = CGAffineTransformScale(CGAffineTransformIdentity,kLeftScale,kLeftScale);
         self.contentView.alpha = kLeftAlpha;
-        [aview removeFromSuperview];
-
+        
         [UIView commitAnimations];
         _scalef = 0;
         [self removeSingleTap];
@@ -217,7 +217,7 @@
     self.leftTableview.center = CGPointMake(kLeftCenterX, kScreenHeight * 0.5);
     self.leftTableview.transform = CGAffineTransformScale(CGAffineTransformIdentity,kLeftScale,kLeftScale);
     self.contentView.alpha = kLeftAlpha;
-    [aview removeFromSuperview];
+    
     [UIView commitAnimations];
     [self removeSingleTap];
 }
@@ -235,11 +235,6 @@
     self.leftTableview.center = CGPointMake((kScreenWidth - kMainPageDistance) * 0.5, kScreenHeight * 0.5);
     self.leftTableview.transform = CGAffineTransformScale(CGAffineTransformIdentity,1.0,1.0);
     self.contentView.alpha = 0;
-    
-   aview=[UIView new];
-    aview.backgroundColor=[[UIColor blackColor] colorWithAlphaComponent:.5];
-    aview.frame=self.mainVC.view.bounds;
-    [self.mainVC.view addSubview:aview];
     
     [UIView commitAnimations];
     [self disableTapButton];
@@ -300,4 +295,8 @@
     }
 }
 
+-(void)closeNot:(NSNotification *)not{
+    
+    
+}
 @end

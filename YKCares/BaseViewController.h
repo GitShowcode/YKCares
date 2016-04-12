@@ -11,6 +11,7 @@
 #import "YKCaresNoViewController.h"
 #import "MBProgressHUD.h"
 #import "Alert.h"
+#import "BTLabel.h"
 @interface BaseViewController : UIViewController
 {
     MBProgressHUD *myHUD;

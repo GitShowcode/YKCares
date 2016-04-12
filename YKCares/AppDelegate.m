@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LeftSlideViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,36 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+
+    
+    
+    MainViewController *mainVC=[[MainViewController alloc] init];
+    
+    PersonViewController *personVC=[[PersonViewController alloc] init];
+    
+    
+    UINavigationController *mainnav=[[UINavigationController alloc] initWithRootViewController:mainVC];
+    
+    UINavigationController *personnav=[[UINavigationController alloc] initWithRootViewController:personVC];
+    
+    personVC.myblock=^(UIViewController *VC){
+        
+        [mainnav pushViewController:VC animated:YES];
+    };
+    
+    LeftSlideViewController *leftVC=[[LeftSlideViewController alloc] initWithLeftView:personnav andMainView:mainnav];
+    self.window.rootViewController=leftVC;
+    
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+
+    
     return YES;
 }
 
