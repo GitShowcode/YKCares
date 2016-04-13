@@ -9,7 +9,9 @@
 #import "AppDelegate.h"
 #import "LeftSlideViewController.h"
 @interface AppDelegate ()
-
+{
+    
+}
 @end
 
 @implementation AppDelegate
@@ -32,20 +34,59 @@
     
     UINavigationController *personnav=[[UINavigationController alloc] initWithRootViewController:personVC];
     
-    personVC.myblock=^(UIViewController *VC){
+    personVC.myblock=^(UIViewController *VC,int type){
         
-        [mainnav pushViewController:VC animated:YES];
+        if (type==0) {
+            
+            [mainnav pushViewController:VC animated:YES];
+
+        }
+        else if (type==1){
+           
+            CATransition *transition = [CATransition animation];
+            
+            transition.duration = 0.5f;
+            transition.timingFunction =
+            [CAMediaTimingFunction functionWithName:
+             kCAMediaTimingFunctionDefault];
+            transition.type = kCATransitionMoveIn;
+            transition.subtype = kCATransitionFromTop;
+            transition.delegate = self;
+            [mainnav.view.layer addAnimation:transition forKey:nil];
+            [mainnav pushViewController:VC animated:NO];
+
+        }
+
+        
     };
     
+
+   
     LeftSlideViewController *leftVC=[[LeftSlideViewController alloc] initWithLeftView:personnav andMainView:mainnav];
     self.window.rootViewController=leftVC;
-    
-    
-    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
-    
-    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+    mainVC.myblock=^(BOOL isopen){
+        if (isopen==1) {
+            [leftVC setPanEnabled:YES];
+        }
+        else{
+            //关闭
+            [leftVC setPanEnabled:NO];
 
+        }
+    };
     
+    
+    //56 55 60
+    NSMutableDictionary *barAttrs = [NSMutableDictionary dictionary];
+    [barAttrs setObject:[UIColor whiteColor] forKey:UITextAttributeTextColor];
+    [barAttrs setObject:[NSValue valueWithUIOffset:UIOffsetMake(0, 0)] forKey:UITextAttributeTextShadowOffset];
+    [[UINavigationBar appearance] setTitleTextAttributes:barAttrs];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    //46 45 52
+    [[UINavigationBar appearance] setBarTintColor:[RGB(46, 45, 52) colorWithAlphaComponent:1]];
+    //self.navigationController.navigationBar.translucent = YES;
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
     return YES;
 }
 
@@ -69,6 +110,11 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+-(void)setpushnewanimation{
+    
+
+    
 }
 
 @end

@@ -7,7 +7,13 @@
 //
 
 #import "BaseViewController.h"
+#import "CCRadarView.h"
+typedef void (^ ChangePan) (BOOL isopen);
 
 @interface MainViewController : BaseViewController
+{
+
+}
+@property (nonatomic,copy)ChangePan myblock;
 
 @end

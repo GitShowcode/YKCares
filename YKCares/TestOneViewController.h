@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 
-@interface TestOneViewController : BaseViewController
+@interface TestOneViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic,strong)UITableView *mytableview;
 
 @end

@@ -8,12 +8,25 @@
 
 #import "PersonViewController.h"
 
+#import "DoctorViewController.h"
+#import "ArchivesViewController.h"
+#import "InvitationViewController.h"
+#import "ChangePasswordViewController.h"
+#import "LoginViewController.h"
 @interface PersonViewController ()
 
 @end
 
 @implementation PersonViewController
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+}
+-(void)viewWillDisappear:(BOOL)animated{
 
+    [super viewWillDisappear:animated];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -46,7 +59,7 @@
  
     }
     
-    NSArray *array=@[@"我的一生",@"我的档案",@"我的邀请"];
+    NSArray *array=@[@"我的医生",@"我的档案",@"我的邀请"];
    
     
     self.mydatas=[NSMutableArray arrayWithCapacity:10];
@@ -57,7 +70,49 @@
     }
     [self.mytableview reloadData];
     
+    
+    
+    UIView *footview=[[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT-100, 270, 100)];
+    footview.backgroundColor=self.view.backgroundColor;
+    [self.view addSubview:footview];
+    
+    UIButton *outbtn=[UIButton buttonWithType:UIButtonTypeCustom];
+    outbtn.frame=CGRectMake(270-80-15,100-30-15 ,80 , 30);
+    [outbtn setTitle:@"退出登录" forState:JNormal];
+    [outbtn setTitleColor:[UIColor grayColor] forState:JNormal];
+    [footview addSubview:outbtn];
+    
+    
+    
+    UIButton *changebtn=[UIButton buttonWithType:UIButtonTypeCustom];
+    changebtn.frame=CGRectMake(15,100-30-15 ,80 , 30);
+    [changebtn setTitle:@"修改密码" forState:JNormal];
+    [changebtn setTitleColor:[UIColor grayColor] forState:JNormal];
+    [footview addSubview:changebtn];
+    
     //270
+    [outbtn addTarget:self action:@selector(outlogin) forControlEvents:JAction];
+    
+    [changebtn addTarget:self action:@selector(changepassword) forControlEvents:JAction];
+
+}
+-(void)outlogin{
+    
+    NSNotification *notification=[NSNotification notificationWithName:@"closeleft" object:self userInfo:nil];
+    [[NSNotificationCenter defaultCenter]postNotification:notification];
+
+    
+    
+   
+
+
+     LoginViewController *VC=[[LoginViewController alloc] init];
+     self.myblock(VC,1);
+    
+    
+}
+-(void)changepassword{
+    
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
    
@@ -85,7 +140,6 @@
         
     }
     PersonObj *p=self.mydatas[indexPath.row];
-
     
     UIImageView *imgView=(UIImageView *)[cell.contentView viewWithTag:110];
     imgView.image=[UIImage imageNamed:@"健康方舟128_meitu_1.jpg"];
@@ -120,9 +174,23 @@
     
    
     
-    TestViewController *VC=[[TestViewController  alloc] init];
+
+    UIViewController *VC;
     
-    self.myblock(VC);
+    if (indexPath.row==0) {
+      
+        VC=[[DoctorViewController alloc] init];
+    }
+    else if (indexPath.row==1)
+    {
+        VC=[[ArchivesViewController alloc] init];
+    }
+    else if (indexPath.row==2){
+   
+        VC=[[InvitationViewController alloc] init];
+    }
+    
+    self.myblock(VC,0);
     
 }
 - (void)didReceiveMemoryWarning {

@@ -7,7 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		600DCB8B1CBDDDF9005171AB /* InvitationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600DCB8A1CBDDDF9005171AB /* InvitationViewController.m */; };
+		600DCB8F1CBDDFB8005171AB /* ArchivesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600DCB8E1CBDDFB8005171AB /* ArchivesViewController.m */; };
+		600DCB931CBDDFCD005171AB /* DoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600DCB921CBDDFCD005171AB /* DoctorViewController.m */; };
+		600DCB971CBDE113005171AB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600DCB961CBDE113005171AB /* LoginViewController.m */; };
+		600DCB9A1CBDE136005171AB /* SigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600DCB991CBDE136005171AB /* SigninViewController.m */; };
+		600DCB9E1CBDE6AB005171AB /* HealthCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600DCB9D1CBDE6AB005171AB /* HealthCheckViewController.m */; };
+		600DCBA11CBDE6DB005171AB /* RemoteDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600DCBA01CBDE6DB005171AB /* RemoteDoctorViewController.m */; };
+		600DCBA41CBDE718005171AB /* FamousViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600DCBA31CBDE718005171AB /* FamousViewController.m */; };
 		60186A1D1CB74DCF006FADB0 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 60186A1C1CB74DCF006FADB0 /* Alert.m */; };
+		60283A141CBE191B00890874 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60283A131CBE191B00890874 /* FeedbackViewController.m */; };
+		60283A181CBE1A9500890874 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60283A171CBE1A9500890874 /* OrderViewController.m */; };
+		60283A1C1CBE209500890874 /* NewTabbarView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 60283A1B1CBE209500890874 /* NewTabbarView2.m */; };
+		60283A201CBE3A1800890874 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60283A1F1CBE3A1800890874 /* ChangePasswordViewController.m */; };
 		602C10281CB606FE009F6FE1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602C10271CB606FE009F6FE1 /* TestViewController.m */; };
 		6051EC801CBC8E6700FCD07C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6051EC7F1CBC8E6700FCD07C /* MainViewController.m */; };
 		6051EC831CBC8E7400FCD07C /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6051EC821CBC8E7400FCD07C /* PersonViewController.m */; };
@@ -23,10 +35,13 @@
 		608585A71CB52EA7006EE82B /* NSString+OutNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 608585A61CB52EA7006EE82B /* NSString+OutNull.m */; };
 		608585AA1CB52F1A006EE82B /* YKCaresObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 608585A91CB52F1A006EE82B /* YKCaresObj.m */; };
 		608585AD1CB52F52006EE82B /* NSDictionary+JJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 608585AC1CB52F52006EE82B /* NSDictionary+JJson.m */; };
+		60AFEB701CBE52FF00B4C7C1 /* Testjosnobj.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AFEB6F1CBE52FF00B4C7C1 /* Testjosnobj.m */; };
 		60D54D131CBC9A980084C43F /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D54D121CBC9A980084C43F /* LeftSlideViewController.m */; };
 		60D54D161CBCA1D80084C43F /* PersonObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D54D151CBCA1D80084C43F /* PersonObj.m */; };
 		60D54D181CBCA4010084C43F /* 健康方舟128_meitu_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60D54D171CBCA4010084C43F /* 健康方舟128_meitu_1.jpg */; };
 		60D54D1C1CBCACFC0084C43F /* TestOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D54D1B1CBCACFC0084C43F /* TestOneViewController.m */; };
+		60D54D201CBCDE0C0084C43F /* CCRadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D54D1F1CBCDE0C0084C43F /* CCRadarView.m */; };
+		60D54D221CBCDE540084C43F /* 21-093116_953.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60D54D211CBCDE540084C43F /* 21-093116_953.jpg */; };
 		60FC4CE61CB7AB3800C7FF35 /* Warning_71.654676258993px_1183460_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FC4CE31CB7AB3800C7FF35 /* Warning_71.654676258993px_1183460_easyicon.net.png */; };
 		60FC4CE71CB7AB3800C7FF35 /* Ok_78.904109589041px_1183433_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FC4CE41CB7AB3800C7FF35 /* Ok_78.904109589041px_1183433_easyicon.net.png */; };
 		60FC4CE81CB7AB3800C7FF35 /* Delete_72px_1183403_easyicon.net.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FC4CE51CB7AB3800C7FF35 /* Delete_72px_1183403_easyicon.net.png */; };
@@ -36,8 +51,32 @@
 /* Begin PBXFileReference section */
 		11A554C470258D7D491325B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E6A78F14FEF9AB7F2CC00A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		600DCB891CBDDDF9005171AB /* InvitationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitationViewController.h; sourceTree = "<group>"; };
+		600DCB8A1CBDDDF9005171AB /* InvitationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitationViewController.m; sourceTree = "<group>"; };
+		600DCB8D1CBDDFB8005171AB /* ArchivesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchivesViewController.h; sourceTree = "<group>"; };
+		600DCB8E1CBDDFB8005171AB /* ArchivesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchivesViewController.m; sourceTree = "<group>"; };
+		600DCB911CBDDFCD005171AB /* DoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorViewController.h; sourceTree = "<group>"; };
+		600DCB921CBDDFCD005171AB /* DoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorViewController.m; sourceTree = "<group>"; };
+		600DCB951CBDE113005171AB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		600DCB961CBDE113005171AB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		600DCB981CBDE136005171AB /* SigninViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigninViewController.h; sourceTree = "<group>"; };
+		600DCB991CBDE136005171AB /* SigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninViewController.m; sourceTree = "<group>"; };
+		600DCB9C1CBDE6AB005171AB /* HealthCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthCheckViewController.h; sourceTree = "<group>"; };
+		600DCB9D1CBDE6AB005171AB /* HealthCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthCheckViewController.m; sourceTree = "<group>"; };
+		600DCB9F1CBDE6DB005171AB /* RemoteDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteDoctorViewController.h; sourceTree = "<group>"; };
+		600DCBA01CBDE6DB005171AB /* RemoteDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteDoctorViewController.m; sourceTree = "<group>"; };
+		600DCBA21CBDE718005171AB /* FamousViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FamousViewController.h; sourceTree = "<group>"; };
+		600DCBA31CBDE718005171AB /* FamousViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FamousViewController.m; sourceTree = "<group>"; };
 		60186A1B1CB74DCF006FADB0 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
 		60186A1C1CB74DCF006FADB0 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
+		60283A121CBE191B00890874 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		60283A131CBE191B00890874 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		60283A161CBE1A9500890874 /* OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
+		60283A171CBE1A9500890874 /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
+		60283A1A1CBE209500890874 /* NewTabbarView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTabbarView2.h; sourceTree = "<group>"; };
+		60283A1B1CBE209500890874 /* NewTabbarView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTabbarView2.m; sourceTree = "<group>"; };
+		60283A1E1CBE3A1800890874 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		60283A1F1CBE3A1800890874 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
 		602C10261CB606FE009F6FE1 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		602C10271CB606FE009F6FE1 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		6051EC7E1CBC8E6700FCD07C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -68,6 +107,8 @@
 		608585A91CB52F1A006EE82B /* YKCaresObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCaresObj.m; sourceTree = "<group>"; };
 		608585AB1CB52F52006EE82B /* NSDictionary+JJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JJson.h"; sourceTree = "<group>"; };
 		608585AC1CB52F52006EE82B /* NSDictionary+JJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JJson.m"; sourceTree = "<group>"; };
+		60AFEB6E1CBE52FF00B4C7C1 /* Testjosnobj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Testjosnobj.h; sourceTree = "<group>"; };
+		60AFEB6F1CBE52FF00B4C7C1 /* Testjosnobj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Testjosnobj.m; sourceTree = "<group>"; };
 		60D54D111CBC9A980084C43F /* LeftSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSlideViewController.h; sourceTree = "<group>"; };
 		60D54D121CBC9A980084C43F /* LeftSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSlideViewController.m; sourceTree = "<group>"; };
 		60D54D141CBCA1D80084C43F /* PersonObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonObj.h; sourceTree = "<group>"; };
@@ -75,6 +116,9 @@
 		60D54D171CBCA4010084C43F /* 健康方舟128_meitu_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "健康方舟128_meitu_1.jpg"; sourceTree = "<group>"; };
 		60D54D1A1CBCACFC0084C43F /* TestOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOneViewController.h; sourceTree = "<group>"; };
 		60D54D1B1CBCACFC0084C43F /* TestOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOneViewController.m; sourceTree = "<group>"; };
+		60D54D1E1CBCDE0C0084C43F /* CCRadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRadarView.h; sourceTree = "<group>"; };
+		60D54D1F1CBCDE0C0084C43F /* CCRadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRadarView.m; sourceTree = "<group>"; };
+		60D54D211CBCDE540084C43F /* 21-093116_953.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "21-093116_953.jpg"; sourceTree = "<group>"; };
 		60FC4CE31CB7AB3800C7FF35 /* Warning_71.654676258993px_1183460_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Warning_71.654676258993px_1183460_easyicon.net.png; sourceTree = "<group>"; };
 		60FC4CE41CB7AB3800C7FF35 /* Ok_78.904109589041px_1183433_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ok_78.904109589041px_1183433_easyicon.net.png; sourceTree = "<group>"; };
 		60FC4CE51CB7AB3800C7FF35 /* Delete_72px_1183403_easyicon.net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delete_72px_1183403_easyicon.net.png; sourceTree = "<group>"; };
@@ -93,6 +137,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		600DCB881CBDDD7A005171AB /* Invitation */ = {
+			isa = PBXGroup;
+			children = (
+				600DCB891CBDDDF9005171AB /* InvitationViewController.h */,
+				600DCB8A1CBDDDF9005171AB /* InvitationViewController.m */,
+			);
+			name = Invitation;
+			sourceTree = "<group>";
+		};
+		600DCB8C1CBDDFA4005171AB /* Archives */ = {
+			isa = PBXGroup;
+			children = (
+				600DCB8D1CBDDFB8005171AB /* ArchivesViewController.h */,
+				600DCB8E1CBDDFB8005171AB /* ArchivesViewController.m */,
+			);
+			name = Archives;
+			sourceTree = "<group>";
+		};
+		600DCB901CBDDFBF005171AB /* Doctor */ = {
+			isa = PBXGroup;
+			children = (
+				60283A151CBE1A8700890874 /* Order */,
+				60283A111CBE18C900890874 /* Feedback */,
+				600DCB911CBDDFCD005171AB /* DoctorViewController.h */,
+				600DCB921CBDDFCD005171AB /* DoctorViewController.m */,
+			);
+			name = Doctor;
+			sourceTree = "<group>";
+		};
+		600DCB941CBDE100005171AB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				600DCB951CBDE113005171AB /* LoginViewController.h */,
+				600DCB961CBDE113005171AB /* LoginViewController.m */,
+				600DCB981CBDE136005171AB /* SigninViewController.h */,
+				600DCB991CBDE136005171AB /* SigninViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		600DCB9B1CBDE5A3005171AB /* Serve */ = {
+			isa = PBXGroup;
+			children = (
+				600DCB9C1CBDE6AB005171AB /* HealthCheckViewController.h */,
+				600DCB9D1CBDE6AB005171AB /* HealthCheckViewController.m */,
+				600DCB9F1CBDE6DB005171AB /* RemoteDoctorViewController.h */,
+				600DCBA01CBDE6DB005171AB /* RemoteDoctorViewController.m */,
+				600DCBA21CBDE718005171AB /* FamousViewController.h */,
+				600DCBA31CBDE718005171AB /* FamousViewController.m */,
+			);
+			name = Serve;
+			sourceTree = "<group>";
+		};
 		60186A1A1CB74DC8006FADB0 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +197,44 @@
 				60186A1C1CB74DCF006FADB0 /* Alert.m */,
 			);
 			name = Alert;
+			sourceTree = "<group>";
+		};
+		60283A111CBE18C900890874 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				60283A121CBE191B00890874 /* FeedbackViewController.h */,
+				60283A131CBE191B00890874 /* FeedbackViewController.m */,
+			);
+			name = Feedback;
+			sourceTree = "<group>";
+		};
+		60283A151CBE1A8700890874 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				60283A161CBE1A9500890874 /* OrderViewController.h */,
+				60283A171CBE1A9500890874 /* OrderViewController.m */,
+			);
+			name = Order;
+			sourceTree = "<group>";
+		};
+		60283A191CBE208C00890874 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				60283A1A1CBE209500890874 /* NewTabbarView2.h */,
+				60283A1B1CBE209500890874 /* NewTabbarView2.m */,
+				60AFEB6E1CBE52FF00B4C7C1 /* Testjosnobj.h */,
+				60AFEB6F1CBE52FF00B4C7C1 /* Testjosnobj.m */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
+		60283A1D1CBE39EC00890874 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				60283A1E1CBE3A1800890874 /* ChangePasswordViewController.h */,
+				60283A1F1CBE3A1800890874 /* ChangePasswordViewController.m */,
+			);
+			name = ChangePassword;
 			sourceTree = "<group>";
 		};
 		6051EC7D1CBC8DFC00FCD07C /* Main */ = {
@@ -143,6 +278,9 @@
 		608585831CB5153F006EE82B /* YKCares */ = {
 			isa = PBXGroup;
 			children = (
+				60283A191CBE208C00890874 /* CustomView */,
+				600DCB9B1CBDE5A3005171AB /* Serve */,
+				600DCB941CBDE100005171AB /* Login */,
 				60D54D191CBCA4060084C43F /* TestData */,
 				6051EC7D1CBC8DFC00FCD07C /* Main */,
 				608C566C1CBBBE1D008C4C90 /* Person */,
@@ -190,6 +328,7 @@
 		608585A11CB52D32006EE82B /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				60D54D1D1CBCDE070084C43F /* 雷达 */,
 				608585A21CB52E98006EE82B /* UIButton+EnlargeArea.h */,
 				608585A31CB52E98006EE82B /* UIButton+EnlargeArea.m */,
 				608585A51CB52EA7006EE82B /* NSString+OutNull.h */,
@@ -205,6 +344,10 @@
 		608C566C1CBBBE1D008C4C90 /* Person */ = {
 			isa = PBXGroup;
 			children = (
+				60283A1D1CBE39EC00890874 /* ChangePassword */,
+				600DCB901CBDDFBF005171AB /* Doctor */,
+				600DCB8C1CBDDFA4005171AB /* Archives */,
+				600DCB881CBDDD7A005171AB /* Invitation */,
 				6051EC811CBC8E7400FCD07C /* PersonViewController.h */,
 				6051EC821CBC8E7400FCD07C /* PersonViewController.m */,
 				60D54D141CBCA1D80084C43F /* PersonObj.h */,
@@ -217,10 +360,20 @@
 			isa = PBXGroup;
 			children = (
 				60D54D171CBCA4010084C43F /* 健康方舟128_meitu_1.jpg */,
+				60D54D211CBCDE540084C43F /* 21-093116_953.jpg */,
 				60D54D1A1CBCACFC0084C43F /* TestOneViewController.h */,
 				60D54D1B1CBCACFC0084C43F /* TestOneViewController.m */,
 			);
 			name = TestData;
+			sourceTree = "<group>";
+		};
+		60D54D1D1CBCDE070084C43F /* 雷达 */ = {
+			isa = PBXGroup;
+			children = (
+				60D54D1E1CBCDE0C0084C43F /* CCRadarView.h */,
+				60D54D1F1CBCDE0C0084C43F /* CCRadarView.m */,
+			);
+			name = "雷达";
 			sourceTree = "<group>";
 		};
 		69ED990DA85B7D94CCC9A5DD /* Frameworks */ = {
@@ -304,6 +457,7 @@
 				608585911CB5153F006EE82B /* Assets.xcassets in Resources */,
 				6085858F1CB5153F006EE82B /* Main.storyboard in Resources */,
 				60D54D181CBCA4010084C43F /* 健康方舟128_meitu_1.jpg in Resources */,
+				60D54D221CBCDE540084C43F /* 21-093116_953.jpg in Resources */,
 				60FC4CE61CB7AB3800C7FF35 /* Warning_71.654676258993px_1183460_easyicon.net.png in Resources */,
 				60FC4CE81CB7AB3800C7FF35 /* Delete_72px_1183403_easyicon.net.png in Resources */,
 				60FC4CE71CB7AB3800C7FF35 /* Ok_78.904109589041px_1183433_easyicon.net.png in Resources */,
@@ -365,8 +519,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				600DCB9E1CBDE6AB005171AB /* HealthCheckViewController.m in Sources */,
 				6085858C1CB5153F006EE82B /* ViewController.m in Sources */,
 				60D54D131CBC9A980084C43F /* LeftSlideViewController.m in Sources */,
+				600DCBA41CBDE718005171AB /* FamousViewController.m in Sources */,
 				608585AA1CB52F1A006EE82B /* YKCaresObj.m in Sources */,
 				60D54D1C1CBCACFC0084C43F /* TestOneViewController.m in Sources */,
 				6085859D1CB52087006EE82B /* BaseViewController.m in Sources */,
@@ -374,11 +530,23 @@
 				608585A71CB52EA7006EE82B /* NSString+OutNull.m in Sources */,
 				6051EC831CBC8E7400FCD07C /* PersonViewController.m in Sources */,
 				608585AD1CB52F52006EE82B /* NSDictionary+JJson.m in Sources */,
+				60283A141CBE191B00890874 /* FeedbackViewController.m in Sources */,
+				60D54D201CBCDE0C0084C43F /* CCRadarView.m in Sources */,
+				600DCB9A1CBDE136005171AB /* SigninViewController.m in Sources */,
 				60186A1D1CB74DCF006FADB0 /* Alert.m in Sources */,
+				600DCBA11CBDE6DB005171AB /* RemoteDoctorViewController.m in Sources */,
+				600DCB971CBDE113005171AB /* LoginViewController.m in Sources */,
+				600DCB931CBDDFCD005171AB /* DoctorViewController.m in Sources */,
 				602C10281CB606FE009F6FE1 /* TestViewController.m in Sources */,
+				60283A201CBE3A1800890874 /* ChangePasswordViewController.m in Sources */,
+				600DCB8F1CBDDFB8005171AB /* ArchivesViewController.m in Sources */,
 				60620DA91CB89C2D0001A52E /* UIView_extra.m in Sources */,
 				60D54D161CBCA1D80084C43F /* PersonObj.m in Sources */,
+				60283A1C1CBE209500890874 /* NewTabbarView2.m in Sources */,
+				60283A181CBE1A9500890874 /* OrderViewController.m in Sources */,
+				60AFEB701CBE52FF00B4C7C1 /* Testjosnobj.m in Sources */,
 				608585A41CB52E98006EE82B /* UIButton+EnlargeArea.m in Sources */,
+				600DCB8B1CBDDDF9005171AB /* InvitationViewController.m in Sources */,
 				6051EC801CBC8E6700FCD07C /* MainViewController.m in Sources */,
 				608585861CB5153F006EE82B /* main.m in Sources */,
 			);

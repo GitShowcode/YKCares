@@ -16,9 +16,16 @@
 {
     MBProgressHUD *myHUD;
     Alert *myalert;
+   
+    UIImageView *navBarHairlineImageView;
+        
     
     
 }
+-(void)setpopnewanimation;
+-(void)setpushnewanimation;
+
+
 -(void)hudloadtext:(NSString *)mystring;
 -(void)huddismiss;
 

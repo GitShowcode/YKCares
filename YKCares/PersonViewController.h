@@ -9,12 +9,15 @@
 #import "BaseViewController.h"
 #import "PersonObj.h"
 #import "TestViewController.h"
-typedef void (^PushVC) (UIViewController *VC);
+
+typedef void (^PushVC) (UIViewController *VC,int type);
 
 @interface PersonViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *mytableview;
 @property (nonatomic,strong)NSMutableArray *mydatas;
 @property (nonatomic,copy)PushVC myblock;
+
+
 
 
 @end

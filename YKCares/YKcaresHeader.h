@@ -10,7 +10,6 @@
 #define YKcaresHeader_h
 
 #define Baseurl @"http://182.92.107.14/index.php/Interface/"
-#define IMAGE(A) [UIImage imageNamed:A]
 
 #define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
 

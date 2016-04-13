@@ -29,6 +29,7 @@
     // Do any additional setup after loading the view.
 }
 
+
 /**
  @brief 初始化侧滑控制器
  @param leftVC 左视图控制器
@@ -209,7 +210,7 @@
  */
 - (void)closeLeftView
 {
-    [UIView beginAnimations:nil context:nil];
+   [UIView beginAnimations:nil context:nil];
     self.mainVC.view.transform = CGAffineTransformScale(CGAffineTransformIdentity,1.0,1.0);
     self.mainVC.view.center = CGPointMake(kScreenWidth / 2, kScreenHeight / 2);
     self.closed = YES;
@@ -220,6 +221,8 @@
     
     [UIView commitAnimations];
     [self removeSingleTap];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
 }
 
 /**
@@ -238,6 +241,8 @@
     
     [UIView commitAnimations];
     [self disableTapButton];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 }
 
 #pragma mark - 行为收敛控制

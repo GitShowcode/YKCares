@@ -14,6 +14,7 @@
 green:(1.0*(__g)/255)\
 blue:(1.0*(__b)/255)\
 alpha:1.0]
+#define IMAGE(A) [UIImage imageNamed:A]
 
 
 //分割线

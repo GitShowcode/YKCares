@@ -18,6 +18,28 @@
     
     
 }
+-(void)setpopnewanimation{
+    CATransition *transition = [CATransition animation];transition.duration = 0.5f;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
+    transition.type = kCATransitionReveal;
+    transition.subtype = kCATransitionFromBottom;
+    transition.delegate = self;
+    [self.navigationController.view.layer addAnimation:transition forKey:nil];
+}
+-(void)setpushnewanimation{
+    
+    CATransition *transition = [CATransition animation];
+    
+    transition.duration = 0.5f;
+    transition.timingFunction =
+    [CAMediaTimingFunction functionWithName:
+     kCAMediaTimingFunctionDefault];
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromTop;
+    transition.delegate = self;
+    [self.navigationController.view.layer addAnimation:transition forKey:nil];
+    
+}
 
 /*--------------hud--------------**/
 
@@ -96,7 +118,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (UIImageView *)findHairlineImageViewUnder:(UIView *)view {
+    if ([view isKindOfClass:UIImageView.class] && view.bounds.size.height <= 1.0) {
+        return (UIImageView *)view;
+    }
+    for (UIView *subview in view.subviews) {
+        UIImageView *imageView = [self findHairlineImageViewUnder:subview];
+        if (imageView) {
+            return imageView;
+        }
+    }
+    return nil;
+}
 /*
 #pragma mark - Navigation
 
