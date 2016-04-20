@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B308E060DFBF3E1DC1311B84'
+               BlueprintIdentifier = 'F5AD0A9A2A6A2549F527FD57'
                BlueprintName = 'BTLabel'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libBTLabel.a'>

@@ -29,9 +29,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title=@"测试";
+//    
+//   [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+//    [self.navigationController.navigationBar setTranslucent:YES];
 //    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    //[self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
-    [self.navigationController.navigationBar setTranslucent:YES];
 
     self.view.backgroundColor=[UIColor cyanColor];
    

@@ -7,7 +7,9 @@
 //
 
 #import "BaseViewController.h"
+#import "HealthObj.h"
 
-@interface HealthCheckViewController : BaseViewController
+@interface HealthCheckViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic,strong)NSMutableArray *mydatas;
 
 @end

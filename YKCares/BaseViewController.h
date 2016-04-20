@@ -12,7 +12,13 @@
 #import "MBProgressHUD.h"
 #import "Alert.h"
 #import "BTLabel.h"
-@interface BaseViewController : UIViewController
+#import "UIDTOKEN.h"
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "SDImageCache.h"
+
+
+@interface BaseViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 {
     MBProgressHUD *myHUD;
     Alert *myalert;
@@ -22,6 +28,8 @@
     
     
 }
+@property (nonatomic,strong)UITableView *mytableviewone;
+
 -(void)setpopnewanimation;
 -(void)setpushnewanimation;
 
@@ -39,5 +47,18 @@
 -(void)alertwarning:(NSString *)mystring andtimer:(long)timer;
 
 
+-(void)dismissTF;
+-(void)adddismissTF;
+
+-(void)createTableviewOne;
 -(void)ykcares;
+-(void)setAFNetworkingForWS:(NSString *)api andparameters:(NSDictionary *)parameter success:(void (^)(NSURLSessionDataTask *task, id responseObject))success failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
+
+-(void)datasource;
+-(float)getWW:(NSString *)text andfontsize:(float)newsize;
+-(UIView *)getLineview:(CGRect)arect andcolor:(UIColor *)acolor;
+
+
+
+
 @end

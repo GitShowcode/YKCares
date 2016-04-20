@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TMCache.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +42,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B716179E99A4B8D1901F17FF3E62A815</key>
+		<key>9578C5ADBB196BD705234861602B416E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C634838CA85C7432D55DC66E512C27F5</key>
+		<key>CB46787807EF14336075A4282B2CC0C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E1B593754900BED869BB0009D7E4AEC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F43E8BF1059FE4A37450E95C81262833</key>
 		<dict>
 			<key>primary</key>
 			<true/>

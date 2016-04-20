@@ -13,8 +13,10 @@
 #import "FamousViewController.h"
 
 #import "LoginViewController.h"
-
+#import "DoctorViewController.h"
 #import "TestOneViewController.h"
+static BOOL newopen;
+
 @interface MainViewController ()
 {
     UIView *mainBgview;
@@ -28,7 +30,8 @@
 @implementation MainViewController
 -(void)viewWillAppear:(BOOL)animated{
     self.myblock(1);
-    
+   // navBarHairlineImageView.hidden = YES;
+
     [radarView removeFromSuperview];
 
     
@@ -46,8 +49,25 @@
 }
 -(void)viewWillDisappear:(BOOL)animated{
     self.myblock(0);
+//    navBarHairlineImageView.hidden = NO;
 
     [super viewWillDisappear:animated];
+}
+/*
+ 
+ -(void)viewWillAppear:(BOOL)animated{
+ [super viewWillAppear:animated];
+ 
+ }
+ -(void)viewWillDisappear:(BOOL)animated{
+ 
+ [super viewWillDisappear:animated];
+ 
+ }
+ */
+-(void)testone{
+    
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -56,6 +76,9 @@
     self.title=@"首页";
     
     [self _initview];
+    //44 30
+    UIBarButtonItem *item=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"菜单"] style:UIBarButtonItemStylePlain target:self action:@selector(newtestone)];
+    [self.navigationItem setLeftBarButtonItem:item];
     NSNotification *notification=[NSNotification notificationWithName:@"closeleft" object:self userInfo:nil];
     [[NSNotificationCenter defaultCenter]postNotification:notification];
 
@@ -81,6 +104,8 @@
     else{
         key=1;
     }
+    
+    
     float bgviewheight=ceilf(402*key);
     float bgviewwidth=SCREEN_WIDTH-30;
     float bgviewy=120+64;
@@ -94,7 +119,10 @@
     float moonheight = ceilf((mainmoon+minormoon)*key);
     
  
-    
+    if (SCREEN_HEIGHT==480) {
+        bgviewy=64+50;
+        
+    }
     
     
     mainBgview=[UIView new];
@@ -122,35 +150,53 @@
                        (id)[UIColor colorWithRed:255.0/255 green:196.0/255 blue:61.0/255 alpha:1].CGColor,nil];
     gradient.mask=_shapeLayer;
     [mainBgview.layer addSublayer:gradient];
-    
-    
-    
-    
-    
-    
-    
     // 线
     UIView *lineview=[UIView new];
     lineview.frame=CGRectMake(15, bgviewheight-bootomheight, SCREEN_WIDTH-60, .5);
     lineview.backgroundColor=colorRGBA3;
     [mainBgview addSubview:lineview];
    
+    BTLabel *otherlabel=[self createLabelWithFrame:CGRectMake(15, bgviewheight-bootomheight+15, 56, 16) Font:Fontsize(14) Text:@"其他服务" Textcolor:RGB(118, 118, 118) TextAlignment:0];
+    otherlabel.verticalAlignment=BTVerticalAlignmentCenter;
+    [mainBgview addSubview:otherlabel];
+    
+    
+    
+    BTLabel *mylabel=[self createLabelWithFrame:CGRectMake(SCREEN_WIDTH-56-15-30, 14, 56, 16) Font:Fontsize(14) Text:@"我的服务" Textcolor:RGB(118, 118, 118) TextAlignment:2];
+    mylabel.verticalAlignment=BTVerticalAlignmentCenter;
+    [mainBgview addSubview:mylabel];
+    
     
     //60
     float ballwidth = ceilf(60*key);
-    float ballspace = (SCREEN_WIDTH-ballwidth*3)/4.0;
+    float ballspace = (SCREEN_WIDTH-ballwidth*3-30)*0.625/2.0;
+    float newballspace =(SCREEN_WIDTH-ballwidth*3-30)*0.375/2.0;
+    
+    //120 --320
+    //
     //40
+    NSArray *arraytitles=@[@"名医诊疗",@"高端体检",@"远程诊疗"];
+    NSArray *arrayimgs=@[@"首页－高端体检",@"首页－名医诊疗",@"首页－远程会诊"];
+
     //247 201 65
     for (int i=0; i<3; i++) {
         UIButton *ballView=[UIButton buttonWithType:UIButtonTypeCustom];
         ballView.layer.cornerRadius=ballwidth/2.0;
-        ballView.frame=CGRectMake(ballspace+(ballwidth+ballspace)*i, bgviewheight-40-ballwidth, ballwidth, ballwidth);
+        ballView.frame=CGRectMake(newballspace+(ballwidth+ballspace)*i, bgviewheight-40-ballwidth, ballwidth, ballwidth);
         ballView.tag=i;
         [ballView addTarget:self action:@selector(pushaction:) forControlEvents:JAction];
-        
-        ballView.backgroundColor=RGB(247, 201, 65);
+//        ballView.backgroundColor=RGB(247, 201, 65);
+        [ballView setBackgroundImage:IMAGE(arrayimgs[i]) forState:JNormal];
         [mainBgview addSubview:ballView];
         
+        UILabel *alabel = [[UILabel alloc] init];
+        [mainBgview addSubview:alabel];
+        alabel.text=arraytitles[i];
+        
+        alabel.font=Fontsize(13);
+        alabel.textColor=RGB(118, 118, 118);
+        alabel.frame=CGRectMake(newballspace+(ballwidth+ballspace)*i, bgviewheight-40-ballwidth+10+ballwidth, ballwidth, 14);
+        alabel.textAlignment=NSTextAlignmentCenter;
         
         
     }
@@ -159,14 +205,13 @@
 -(void)newmethod{
     
     
-//    TestOneViewController *VC=[[TestOneViewController alloc] init];
-//    [self.navigationController pushViewController:VC animated:YES];
+    DoctorViewController *VC=[[DoctorViewController alloc] init];
+    [self.navigationController pushViewController:VC animated:YES];
     
    
-    LoginViewController *VC=[[LoginViewController alloc] init];
-    [self setpushnewanimation];
-    
-    [self.navigationController pushViewController:VC animated:NO];
+//    LoginViewController *VC=[[LoginViewController alloc] init];
+//    
+//    [self.navigationController pushViewController:VC animated:NO];
 }
 
 -(void)pushaction:(UIButton * )ibtn{
@@ -190,6 +235,35 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (BTLabel*) createLabelWithFrame: (CGRect) frame Font:(UIFont *)font Text:(NSString *)text  Textcolor:(UIColor *)color TextAlignment:(NSTextAlignment )textAlignment{
+    
+    BTLabel *alabel=[[BTLabel alloc] initWithFrame:frame edgeInsets:UIEdgeInsetsZero];
+    alabel.font=font;
+    alabel.textColor=color;
+    alabel.text=text;
+    if (textAlignment==1) {
+        //默认剧中
+        alabel.textAlignment=NSTextAlignmentCenter;
+        
+    }
+    else{
+        alabel.textAlignment=textAlignment;
+        
+    }
+    alabel.verticalAlignment = BTVerticalAlignmentTop;
+    
+    return alabel;
+}
+-(void)newtestone{
+    newopen=1;
+    
+    if (self.openblock) {
+
+        self.openblock(newopen);
+        
+    }
+    
 }
 
 /*

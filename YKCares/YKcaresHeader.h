@@ -9,7 +9,7 @@
 #ifndef YKcaresHeader_h
 #define YKcaresHeader_h
 
-#define Baseurl @"http://182.92.107.14/index.php/Interface/"
+#define Baseurl @"http://www.ykcares.com/"
 
 #define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
 

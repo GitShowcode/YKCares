@@ -7,7 +7,13 @@
 //
 
 #import "BaseViewController.h"
+#import "FamousTableVell.h"
+#import "FamousObj.h"
 
-@interface FamousViewController : BaseViewController
+@interface FamousViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
+
+
+@property (nonatomic,strong)NSMutableArray *mydatas;
+
 
 @end

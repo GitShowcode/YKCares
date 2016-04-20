@@ -7,7 +7,9 @@
 //
 
 #import "BaseViewController.h"
+#import "RemoteDobj.h"
+@interface RemoteDoctorViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
 
-@interface RemoteDoctorViewController : BaseViewController
+@property (nonatomic,strong)NSMutableArray *mydatas;
 
 @end

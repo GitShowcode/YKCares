@@ -16,18 +16,23 @@ PODS:
     - AFNetworking/NSURLSession
   - BTLabel (1.2.1)
   - MBProgressHUD (0.9.2)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
   - TMCache (2.1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.0)
   - BTLabel (~> 1.2.1)
   - MBProgressHUD (~> 0.9.2)
+  - SDWebImage (~> 3.7.5)
   - TMCache (~> 2.1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   BTLabel: 2ea99b620e9cdf6a5546b1f5292f2a04e50d4dbe
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
 
 COCOAPODS: 0.39.0

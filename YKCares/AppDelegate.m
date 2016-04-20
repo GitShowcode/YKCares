@@ -74,12 +74,19 @@
 
         }
     };
+
+    mainVC.openblock = ^(BOOL isopen){
+        if (isopen==1) {
+            [leftVC openLeftView];
+        }
+
+    };
     
     
     //56 55 60
     NSMutableDictionary *barAttrs = [NSMutableDictionary dictionary];
-    [barAttrs setObject:[UIColor whiteColor] forKey:UITextAttributeTextColor];
-    [barAttrs setObject:[NSValue valueWithUIOffset:UIOffsetMake(0, 0)] forKey:UITextAttributeTextShadowOffset];
+    [barAttrs setObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+//    [barAttrs setObject:[NSValue valueWithUIOffset:UIOffsetMake(0, 0)] forKey:NSShadowAttributeName];
     [[UINavigationBar appearance] setTitleTextAttributes:barAttrs];
     
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];

@@ -13,11 +13,7 @@
 @end
 
 @implementation BaseViewController
--(void)ykcares{
-    
-    
-    
-}
+
 -(void)setpopnewanimation{
     CATransition *transition = [CATransition animation];transition.duration = 0.5f;
     transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
@@ -130,7 +126,87 @@
     }
     return nil;
 }
+-(void)dismissTF{
+    
+    
+}
+-(void)adddismissTF{
+    
+    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissTF)]];
+    
+    
+}
+-(void)createTableviewOne{
+    
+    self.mytableviewone=[[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
+    self.mytableviewone.dataSource=self;
+    self.mytableviewone.delegate=self;
+    self.mytableviewone.showsVerticalScrollIndicator=NO;
+    [self.view addSubview:self.mytableviewone];
+    
+
+    
+}
+
+-(void)setAFNetworkingForWS:(NSString *)api andparameters:(NSDictionary *)parameter success:(void (^)(NSURLSessionDataTask *task, id responseObject))success failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure{
+    
+    
+    NSString *url=[NSString stringWithFormat:@"%@%@",Baseurl,api];
+    NSMutableString *uurl=[[NSMutableString alloc] init];
+    [uurl appendString:[NSString stringWithFormat:@"%@?",url]];
+    NSArray *allkey=[parameter allKeys];
+    for (int i=0; i<allkey.count; i++) {
+        if (allkey.count-1==i) {
+            [uurl appendFormat:@"%@=%@",allkey[i],[parameter objectForKey:allkey[i]]];
+        }
+        else{
+            [uurl appendFormat:@"%@=%@&",allkey[i],[parameter objectForKey:allkey[i]]];
+        }
+        
+    }
+    NSString *newurl= [uurl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"测试url:\n%@",newurl);
+    
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer.timeoutInterval=15;
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer=[AFHTTPRequestSerializer serializer];
+    [manager POST:url parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (success) {
+            success(task, responseObject);
+        }
+
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (error) {
+            failure(task, error);
+        }
+    }];
+    
+    
+}
+
+-(float)getWW:(NSString *)text andfontsize:(float)newsize{
+    NSDictionary* attrs =@{NSFontAttributeName:[UIFont systemFontOfSize:newsize]};
+    NSAttributedString *newatt=[[NSAttributedString alloc] initWithString:text attributes:attrs];
+    CGRect rect=[newatt boundingRectWithSize:CGSizeMake(MAXFLOAT, newsize+1) options:NSStringDrawingTruncatesLastVisibleLine context:nil];
+    CGSize titleSize=rect.size;
+    return titleSize.width;
+    
+}
+
+-(UIView *)getLineview:(CGRect)arect andcolor:(UIColor *)acolor{
+    UIView *aview=[UIView new];
+    aview.frame=arect;
+    aview.backgroundColor=acolor;
+    return aview;
+}
+
 /*
+ 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -139,5 +215,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
 
 @end

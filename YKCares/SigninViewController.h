@@ -9,5 +9,5 @@
 #import "BaseViewController.h"
 
 @interface SigninViewController : BaseViewController
-
+@property (nonatomic,strong)UIScrollView *bgScr;
 @end

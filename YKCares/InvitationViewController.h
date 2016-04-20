@@ -7,7 +7,10 @@
 //
 
 #import "BaseViewController.h"
-
-@interface InvitationViewController : BaseViewController
+#import "InvitationTableViewCell.h"
+#import "InviationObj.h"
+@interface InvitationViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic,strong)UITableView *mytableview;
+@property (nonatomic,strong)NSMutableArray *mydatas;
 
 @end

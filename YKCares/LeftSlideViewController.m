@@ -200,6 +200,8 @@
         [UIView commitAnimations];
         _scalef = 0;
         [self removeSingleTap];
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
     }
     
 }
